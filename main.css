@@ -93,14 +93,14 @@ nav {
 }
 
 nav h1 {
-    font-size: 4rem;
+    font-size: 15px;
     width: 100%;
     background-color: black;
     color: white;
     margin: 0;
     padding-bottom: 0.25em;
     padding-top: 0.25em;
-    border-radius: 10px;
+    border-radius: 2px;
 }
 
 .graph i {
@@ -181,8 +181,7 @@ nav h1 {
 
 #chatelet ul {
     list-style: none;
-    display: flex;
-    justify-content: space-around;
+    display: block;
 }
 
 #chatelet ul li {
