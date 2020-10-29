@@ -1,0 +1,229 @@
+body {
+    margin: 0 2em;
+    font-family: 'Syne Mono', monospace;
+}
+
+a {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+#main {
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+    padding: 5em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#main::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width:850px) {
+    #main {
+        padding: 4em;
+    }
+    .graph {
+        height: 15em !important;
+        width: 15em !important;
+    }
+}
+
+.graph {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: solid black;
+    border-left: solid black;
+    border-width: 10px;
+    height: 20em;
+    width: 20em;
+    box-sizing: border-box;
+    padding-left: 1em;
+    position: relative;
+}
+
+.graph h3 {
+    position: absolute;
+    top: 0;
+    margin-top: 0;
+}
+
+.card {
+    display: flex;
+    margin-top: 2em;
+    margin-right: 6em;
+    padding: 2em;
+    border-radius: 1em;
+    background: linear-gradient(-154deg, #03A9F4, #9C27B0);
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    color: white;
+}
+
+.card:hover {
+    background: linear-gradient(-15deg, #03A9F4, #9C27B0);
+}
+
+.unite {
+    height: auto;
+    padding-right: 1em;
+}
+
+.unite span {
+    display: block;
+    height: 23%;
+}
+
+.spanTest {
+    background-color: white;
+    width: 10px;
+}
+
+.spanTest:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+nav {
+    text-align: center;
+    width: 100%;
+}
+
+nav h1 {
+    font-size: 4rem;
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+    border-radius: 10px;
+}
+
+.graph i {
+    color: black;
+    font-size: 2rem;
+}
+
+.spanTest:hover:after, .spanTest:focus:after {
+    content: attr(aria-label);
+    position: absolute;
+    top: 2.6em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    white-space: nowrap;
+    padding: 5px 69px;
+    background: #b55353;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 2.7rem;
+}
+
+.frame-train {
+    position: relative;
+    overflow: hidden;
+    height: 394px;
+    background: url(assets/rail4.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 2em;
+}
+
+.train {
+    background: linear-gradient(52deg, black 45%, transparent);
+    background-position: center;
+    background-size: cover;
+    padding-top: 11em;
+    position: absolute;
+    bottom: -10.5em;
+    animation: anim-train 15s infinite;
+    -webkit-mask-image: url(assets/Calque\ 1.png);
+    mask-image: url(assets/Calque\ 1.png);
+}
+
+.rail {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+@keyframes anim-train {
+    0% {
+        left: 100%
+    }
+    20% {
+        left: 70%;
+    }
+    40% {
+        left: 65%;
+    }
+    60% {
+        left: 65%;
+    }
+    70% {
+        left: 50%
+    }
+    80% {
+        left: 55%;
+    }
+    90% {
+        left: 30%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+#chatelet ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#chatelet ul li {
+    display: block;
+    border-bottom: solid rgba(0, 0, 0, 0);
+    border-top: solid rgba(0, 0, 0, 0);
+}
+
+#chatelet ul li a {
+    color: black;
+    font-size: 2rem;
+}
+
+#chatelet ul li:hover a {
+    color: rgba(0, 0, 0, 0.671);
+}
+
+#chatelet ul li:hover {
+    color: rgba(0, 0, 0, 0.671);
+    border-bottom: solid rgba(0, 0, 0, 0.671);
+}
+
+.btn-hide {
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+.display-btn-fixed {
+    display: block;
+}
+
+.menu-static {
+    height: auto;
+    width: 2em;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 4rem;
+}
