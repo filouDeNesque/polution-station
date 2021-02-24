@@ -58,13 +58,6 @@ function createCard(info, className) {
 var arrowUp = document.getElementById("arrow-up");
 
 arrowUp.addEventListener("click", function(){
-    // var btnAuber = document.getElementsByClassName("btn-auber")
-    // var btnChatelet = document.getElementsByClassName("btn-chatelet")
-    // var btnPantin = document.getElementsByClassName("btn-pantin")
-    
-    // btnAuber.style.display="block"
-    // btnChatelet.style.display="block"
-    // btnPantin.style.display="block"
     var menuToggle = document.getElementsByClassName("menu-static")
     var toggle = document.getElementsByClassName("display-btn-fixed")
     console.log(toggle)
@@ -75,7 +68,4 @@ arrowUp.addEventListener("click", function(){
     }else{
         menuToggle.className.remove="display-btn-fixed"
     }
-    
-
-    // btnAuber.className="display-btn-fixed"
 })
