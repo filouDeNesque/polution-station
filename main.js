@@ -6,15 +6,11 @@ var no
 var no2
 var hygrom
 
-
-
-
 fetch('https://data.ratp.fr/api/records/1.0/search/?dataset=qualite-de-lair-mesuree-dans-la-station-chatelet&q=&facet=dateheure')
     .then(res => res.json())
     .then(data => {
         getdata(data);
     })
-
 
 function getdata(data) {
     lengthData = data.records.length;
@@ -27,14 +23,25 @@ function getdata(data) {
         no2 = datas.n2cha4;
         hygrom = datas.hycha4;
 
-        createCard(temp * 4, "graph-temp")
-        createCard(co2 / 8, "graph-co2")
+        createCard(temp * 3, "graph-temp")
+        createCard(co2 / 10, "graph-co2")
         createCard(no * 2, "graph-no")
-        createCard(no2 * 2, "graph-no2")
+        createCard(no2 * 1.5, "graph-no2")
         createCard(hygrom, "graph-hygrom")
+
+        createCard(temp * 3, "graph-temp-auber")
+        createCard(co2 / 10, "graph-co2-auber")
+        createCard(no * 2, "graph-no-auber")
+        createCard(no2 * 1.5, "graph-no2-auber")
+        createCard(hygrom, "graph-hygrom-auber")
+
+        createCard(temp * 3, "graph-temp-pantin")
+        createCard(co2 / 10, "graph-co2-pantin")
+        createCard(no * 2, "graph-no-pantin")
+        createCard(no2 * 1.5, "graph-no2-pantin")
+        createCard(hygrom, "graph-hygrom-pantin")
     }
 }
-
 
 function createCard(info, className) {
 
@@ -49,6 +56,7 @@ function createCard(info, className) {
 
 
 var arrowUp = document.getElementById("arrow-up");
+
 arrowUp.addEventListener("click", function(){
     // var btnAuber = document.getElementsByClassName("btn-auber")
     // var btnChatelet = document.getElementsByClassName("btn-chatelet")
