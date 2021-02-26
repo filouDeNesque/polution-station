@@ -26,8 +26,8 @@ a {
         padding : 0 0 2em 0;
     }
     .graph {
-        height: 15em !important;
-        width: 15em !important;
+        height: 5em !important;
+        width: 5em !important;
     }
 }
 
@@ -38,8 +38,8 @@ a {
     border-bottom: solid black;
     border-left: solid black;
     border-width: 10px;
-    height: 20em;
-    width: 20em;
+    height: 11em;
+    width: 11em;
     box-sizing: border-box;
     padding-left: 1em;
     position: relative;
